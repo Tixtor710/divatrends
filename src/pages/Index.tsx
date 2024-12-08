@@ -2,26 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Palette, Heart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-
-// Replace with your WordPress URL
-const WORDPRESS_API_URL = "YOUR_WORDPRESS_URL/wp-json/wp/v2";
-
-const fetchProducts = async () => {
-  const { data } = await axios.get(`${WORDPRESS_API_URL}/products`);
-  console.log("Fetched products:", data);
-  return data;
-};
 
 const Index = () => {
-  const { data: products, isLoading, error } = useQuery({
-    queryKey: ["products"],
-    queryFn: fetchProducts,
-  });
-
-  console.log("Products query state:", { isLoading, error, products });
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -99,23 +81,24 @@ const Index = () => {
         <div className="max-w-screen-xl mx-auto">
           <h2 className="text-3xl font-playfair text-center mb-12">Featured Collections</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {isLoading ? (
-              <p className="text-center col-span-2">Loading products...</p>
-            ) : error ? (
-              <p className="text-center col-span-2 text-red-500">Error loading products. Please try again later.</p>
-            ) : (
-              products?.map((product: any) => (
-                <div key={product.id} className="group relative overflow-hidden rounded-lg aspect-square bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <h3 className="text-2xl font-playfair mb-4">{product.title.rendered}</h3>
-                    <div className="mb-6 text-secondary/80" dangerouslySetInnerHTML={{ __html: product.excerpt.rendered }} />
-                    <Button variant="secondary" asChild>
-                      <Link to={`/products/${product.id}`}>View Details</Link>
-                    </Button>
-                  </div>
-                </div>
-              ))
-            )}
+            <div className="group relative overflow-hidden rounded-lg aspect-square bg-primary/10 hover:bg-primary/20 transition-colors">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                <h3 className="text-2xl font-playfair mb-4">Handcrafted Sarees</h3>
+                <p className="mb-6 text-secondary/80">Elegant tie-dye patterns on premium silk and cotton</p>
+                <Button variant="secondary" asChild>
+                  <Link to="/products?category=sarees">Explore Sarees</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-lg aspect-square bg-primary/10 hover:bg-primary/20 transition-colors">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                <h3 className="text-2xl font-playfair mb-4">Corporate Suits</h3>
+                <p className="mb-6 text-secondary/80">Contemporary tie-dye designs for the modern professional</p>
+                <Button variant="secondary" asChild>
+                  <Link to="/products?category=suits">Explore Suits</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
