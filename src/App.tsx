@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Products from "./pages/Products";
+import Contact from "./pages/Contact";
+import Auth from "./pages/Auth";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Auth />} />
             </Routes>
           </main>
           <Footer />

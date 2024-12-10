@@ -40,14 +40,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-playfair mb-4">Connect With Us</h4>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/divas_trend24?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors"
+              >
                 <Instagram className="h-6 w-6" />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Twitter className="h-6 w-6" />
               </a>
             </div>
           </div>

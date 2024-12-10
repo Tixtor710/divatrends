@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Palette, Heart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import NewsletterDialog from "@/components/NewsletterDialog";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <NewsletterDialog />
       {/* Hero Section */}
       <div className="hero-pattern min-h-[80vh] flex items-center justify-center">
         <div className="max-w-screen-xl mx-auto px-4 py-32 flex flex-col items-center text-center animate-fadeIn">

@@ -22,13 +22,20 @@ const Navbar = () => {
             Diva's Trend
           </span>
         </Link>
-        <Button
-          variant="ghost"
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </Button>
+        <div className="flex items-center gap-4">
+          <Link to="/auth">
+            <Button variant="outline" size="sm">
+              Login
+            </Button>
+          </Link>
+          <Button
+            variant="ghost"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+        </div>
         <div
           className={`${
             isOpen ? "block" : "hidden"
