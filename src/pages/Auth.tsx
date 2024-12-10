@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Google, Github } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 
 const Auth = () => {
   const handleGoogleSignIn = () => {
@@ -26,7 +26,7 @@ const Auth = () => {
             className="w-full" 
             onClick={handleGoogleSignIn}
           >
-            <Google className="mr-2 h-4 w-4" />
+            <Mail className="mr-2 h-4 w-4" />
             Continue with Google
           </Button>
           <Button 
