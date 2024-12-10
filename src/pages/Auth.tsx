@@ -1,16 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Github } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Auth = () => {
   const handleGoogleSignIn = () => {
     // Implement Google Sign In
     console.log("Google Sign In clicked");
-  };
-
-  const handleGithubSignIn = () => {
-    // Implement Github Sign In
-    console.log("Github Sign In clicked");
   };
 
   return (
@@ -28,14 +23,6 @@ const Auth = () => {
           >
             <Mail className="mr-2 h-4 w-4" />
             Continue with Google
-          </Button>
-          <Button 
-            variant="outline" 
-            className="w-full" 
-            onClick={handleGithubSignIn}
-          >
-            <Github className="mr-2 h-4 w-4" />
-            Continue with Github
           </Button>
         </CardContent>
       </Card>

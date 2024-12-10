@@ -15,7 +15,7 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: ["https://drive.google.com/file/d/1W8P58wCYhydusGSAzKJHE6oJpGu4cdQr/view?usp=drive_link"]
+    images: ["https://drive.google.com/uc?export=view&id=1W8P58wCYhydusGSAzKJHE6oJpGu4cdQr"]
   },
   {
     id: 'cd2',
@@ -31,6 +31,6 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: ["https://drive.google.com/file/d/1M2wLnd3Gfs8zvdie2VpOSnmw416NaqD8/view?usp=sharing"]
+    images: ["https://drive.google.com/uc?export=view&id=1M2wLnd3Gfs8zvdie2VpOSnmw416NaqD8"]
   }
 ];
