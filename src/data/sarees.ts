@@ -16,7 +16,7 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: ["https://drive.google.com/uc?export=view&id=1YjMUUzy-4qTgjEEYzO3W3m_bacGS69NI"]
+    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/violet-saree.jpg`]
   },
   {
     id: 's2',
@@ -33,7 +33,7 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: ["https://drive.google.com/uc?export=view&id=1asPCkVk0EhBUYkcxmhPro95k3T6iM3S2"]
+    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/pink-saree.jpg`]
   },
   {
     id: 's3',
@@ -50,7 +50,7 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: ["https://drive.google.com/uc?export=view&id=1IM8EsWnqMpEsuWmmaU1mX-5k0xIAfvQ3"]
+    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/blue-saree.jpg`]
   },
   {
     id: 's4',
@@ -67,6 +67,6 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: ["https://drive.google.com/uc?export=view&id=1lY0PcGzGsMUJx0TrYSHHz_0fVf1hUY3I"]
+    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/green-saree.jpg`]
   }
 ];

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,13 +9,18 @@ const NewsletterDialog = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
-  useEffect(() => {
-    // Show dialog after 3 seconds
-    const timer = setTimeout(() => {
+  // Show dialog after user has spent some time on the site and scrolled a bit
+  const handleScroll = () => {
+    if (window.scrollY > 300 && !localStorage.getItem('newsletterShown')) {
       setOpen(true);
-    }, 3000);
+      localStorage.setItem('newsletterShown', 'true');
+    }
+  };
 
-    return () => clearTimeout(timer);
+  // Add scroll listener
+  useState(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,15 +30,21 @@ const NewsletterDialog = () => {
       description: "Thank you for subscribing to our newsletter!",
     });
     setOpen(false);
+    localStorage.setItem('newsletterSubscribed', 'true');
   };
+
+  // Don't show if user has already subscribed
+  if (localStorage.getItem('newsletterSubscribed')) {
+    return null;
+  }
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-gradient-to-br from-purple-50 to-pink-50">
         <DialogHeader>
-          <DialogTitle>Subscribe to Our Newsletter</DialogTitle>
-          <DialogDescription>
-            Stay updated with our latest collections and exclusive offers!
+          <DialogTitle className="text-2xl font-playfair text-center">Join Our Fashion Community</DialogTitle>
+          <DialogDescription className="text-center">
+            Get exclusive updates on new collections and special offers!
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -43,8 +54,14 @@ const NewsletterDialog = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="border-purple-200 focus:border-purple-300"
           />
-          <Button type="submit" className="w-full">Subscribe</Button>
+          <Button 
+            type="submit" 
+            className="w-full bg-purple-600 hover:bg-purple-700"
+          >
+            Subscribe
+          </Button>
         </form>
       </DialogContent>
     </Dialog>
