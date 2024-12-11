@@ -15,7 +15,7 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Grey Tie-Dye Fabric.jpeg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Grey%20Tie-Dye%20Fabric.jpeg`]
   },
   {
     id: 'f2',
@@ -31,7 +31,7 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Navy Blue Tie-Dye Fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Navy%20Blue%20Tie-Dye%20Fabric.jpg`]
   },
   {
     id: 'f3',
@@ -47,7 +47,7 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Maroon Tie-Dye Fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Maroon%20Tie-Dye%20Fabric.jpg`]
   },
   {
     id: 'f4',
@@ -63,6 +63,6 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Rose Tie-Dye Fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Rose%20Tie-Dye%20Fabric.jpg`]
   }
 ];
