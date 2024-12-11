@@ -15,7 +15,7 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Blue%20Professional%20Co-ords.jpeg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Diva Trends/Co-Ords/Blue%20Professional%20Co-ords.jpeg`]
   },
   {
     id: 'cd2',
