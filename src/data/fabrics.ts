@@ -15,7 +15,7 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/grey-fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/grey-fabric.jpg`]
   },
   {
     id: 'f2',
@@ -31,7 +31,7 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/navy-fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/navy-fabric.jpg`]
   },
   {
     id: 'f3',
@@ -47,7 +47,7 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/maroon-fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/maroon-fabric.jpg`]
   },
   {
     id: 'f4',
@@ -63,6 +63,6 @@ export const fabrics: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom orders: Delivered in 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/rose-fabric.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/rose-fabric.jpg`]
   }
 ];

@@ -15,7 +15,7 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/blue-coords.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/blue-coords.jpg`]
   },
   {
     id: 'cd2',
@@ -31,6 +31,6 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${process.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/purple-coords.jpg`]
+    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/purple-coords.jpg`]
   }
 ];
