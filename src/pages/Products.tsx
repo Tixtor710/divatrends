@@ -69,10 +69,19 @@ const ProductGrid = ({ products }: { products: Product[] }) => {
                 }}
               />
             </AspectRatio>
-            <div className="mt-4">
+            <div className="mt-4 space-y-3">
               <h2 className="text-xl font-playfair font-semibold">{product.name}</h2>
-              <p className="text-gray-600 mt-2">₹{product.price.toLocaleString()}</p>
-              <p className="text-sm text-gray-500 mt-1">{product.material}</p>
+              <p className="text-gray-600">₹{product.price.toLocaleString()}</p>
+              <p className="text-sm text-gray-500">{product.material}</p>
+              <p className="text-sm text-gray-600 line-clamp-3">{product.description}</p>
+              <div className="text-sm text-gray-500 space-y-1">
+                {Object.entries(product.details).map(([key, value]) => (
+                  <div key={key} className="flex flex-col">
+                    <span className="font-medium">{key}:</span>
+                    <span className="ml-2">{Array.isArray(value) ? value.join(", ") : value}</span>
+                  </div>
+                ))}
+              </div>
               <Button 
                 className="w-full mt-4"
                 onClick={() => handleBuyNow(product)}
