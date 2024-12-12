@@ -15,7 +15,7 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Diva Trends/Co-Ords/Blue%20Professional%20Co-ords.jpeg`]
+    images: ["/lovable-uploads/b4ab91c2-433c-4a0e-94ae-873e4705a885.png"]
   },
   {
     id: 'cd2',
@@ -31,6 +31,6 @@ export const corporateDress: Product[] = [
       "Delivery Time": "Ready stock delivered in 8-10 days; custom orders take 10-15 days",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Purple%20Professional%20Co-ords.jpeg`]
+    images: ["/lovable-uploads/c0bf930a-ef15-44bc-b59c-cbd3327cde05.png"]
   }
 ];
