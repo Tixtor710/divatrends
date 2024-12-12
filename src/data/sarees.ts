@@ -16,7 +16,7 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Violet%20Tie-dye%20Saree.jpg`]
+    images: ["/lovable-uploads/93e1b5c8-2d26-4923-a3d0-e592371b0dbb.png"]
   },
   {
     id: 's2',
@@ -33,7 +33,7 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Pink%20Tie-dye%20Saree.jpeg`]
+    images: ["/lovable-uploads/1e3968e1-7976-4add-8306-58c063fcb2c4.png"]
   },
   {
     id: 's3',
@@ -50,7 +50,7 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Blue%20Tie-dye%20Saree.JPG`]
+    images: ["/lovable-uploads/dd853588-ffb4-4706-99e0-0b8191c7f4ad.png"]
   },
   {
     id: 's4',
@@ -67,6 +67,6 @@ export const sarees: Product[] = [
       "Delivery Time": "Ready stock: Delivered in 8-10 days\nCustom handicrafts: 10-15 days as each piece is made to order",
       "Delivery Option": "Prepaid"
     },
-    images: [`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/product-images/Lite%20Green%20Tie-dye%20Saree.JPG`]
+    images: ["/lovable-uploads/64bb3965-0402-47bb-ad6d-4df043898569.png"]
   }
 ];

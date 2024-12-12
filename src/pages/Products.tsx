@@ -3,7 +3,9 @@ import { products } from "@/data/products";
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 import { Product } from "@/data/types";
+import { useToast } from "@/components/ui/use-toast";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -41,31 +43,48 @@ const Products = () => {
   );
 };
 
-const ProductGrid = ({ products }: { products: Product[] }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {products.map((product) => (
-      <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-        <CardContent className="p-4">
-          <AspectRatio ratio={1}>
-            <img
-              src={product.images[0]}
-              alt={product.name}
-              className="object-cover w-full h-full rounded-md"
-              onError={(e) => {
-                console.error(`Error loading image for ${product.name}:`, e);
-                e.currentTarget.src = "/placeholder.svg";
-              }}
-            />
-          </AspectRatio>
-          <div className="mt-4">
-            <h2 className="text-xl font-playfair font-semibold">{product.name}</h2>
-            <p className="text-gray-600 mt-2">₹{product.price.toLocaleString()}</p>
-            <p className="text-sm text-gray-500 mt-1">{product.material}</p>
-          </div>
-        </CardContent>
-      </Card>
-    ))}
-  </div>
-);
+const ProductGrid = ({ products }: { products: Product[] }) => {
+  const { toast } = useToast();
+
+  const handleBuyNow = (product: Product) => {
+    toast({
+      title: "Product Added",
+      description: `${product.name} has been added to your cart.`,
+    });
+  };
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {products.map((product) => (
+        <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+          <CardContent className="p-4">
+            <AspectRatio ratio={1}>
+              <img
+                src={product.images[0]}
+                alt={product.name}
+                className="object-cover w-full h-full rounded-md"
+                onError={(e) => {
+                  console.error(`Error loading image for ${product.name}:`, e);
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
+              />
+            </AspectRatio>
+            <div className="mt-4">
+              <h2 className="text-xl font-playfair font-semibold">{product.name}</h2>
+              <p className="text-gray-600 mt-2">₹{product.price.toLocaleString()}</p>
+              <p className="text-sm text-gray-500 mt-1">{product.material}</p>
+              <Button 
+                className="w-full mt-4"
+                onClick={() => handleBuyNow(product)}
+              >
+                Buy Now
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+};
 
 export default Products;
