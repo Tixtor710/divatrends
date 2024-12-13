@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X, User, ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
@@ -42,6 +42,15 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center gap-4 order-2 md:order-3">
+          <Link to="/cart">
+            <Button 
+              variant="default" 
+              size="icon"
+              className="bg-primary hover:bg-primary/90"
+            >
+              <ShoppingCart className="h-5 w-5 text-white" />
+            </Button>
+          </Link>
           <Link to="/auth">
             <Button 
               variant="default" 
