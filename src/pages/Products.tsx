@@ -8,16 +8,29 @@ import { Product } from "@/data/types";
 import { useToast } from "@/hooks/use-toast";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { useNavigate } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filteredProducts = selectedCategory === "all" 
     ? products 
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 relative">
+      <div className="fixed right-8 top-20 z-10">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="rounded-full bg-primary hover:bg-primary/90"
+        >
+          <ChevronDown className="h-4 w-4 text-white" />
+        </Button>
+      </div>
+
       <h1 className="text-3xl font-playfair font-bold mb-8">Our Products</h1>
       
       <Tabs defaultValue="all" className="w-full mb-8" onValueChange={setSelectedCategory}>
