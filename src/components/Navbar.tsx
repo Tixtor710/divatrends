@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
@@ -22,24 +22,10 @@ const Navbar = () => {
             Diva's Trend
           </span>
         </Link>
-        <div className="flex items-center gap-4">
-          <Link to="/auth">
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
-          </Link>
-          <Button
-            variant="ghost"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
-        </div>
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto`}
+          } w-full md:block md:w-auto order-3 md:order-2`}
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
             {navItems.map((item) => (
@@ -54,6 +40,24 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="flex items-center gap-4 order-2 md:order-3">
+          <Link to="/auth">
+            <Button 
+              variant="default" 
+              size="icon"
+              className="bg-primary hover:bg-primary/90"
+            >
+              <User className="h-5 w-5 text-white" />
+            </Button>
+          </Link>
+          <Button
+            variant="ghost"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
         </div>
       </div>
     </nav>
